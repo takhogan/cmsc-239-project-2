@@ -137,3 +137,9 @@
   font-family: sans-serif;
   font-weight: bold;
 }
+
+body {
+  background-image: url("https://cdn.pixabay.com/photo/2016/01/27/15/25/space-1164579__340.png");
+  background-repeat: repeat;
+  color: yellow;
+}
