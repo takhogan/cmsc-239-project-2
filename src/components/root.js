@@ -2,6 +2,7 @@ import React from 'react';
 import {csv} from 'd3-fetch';
 import ExampleChart from './example-chart';
 import ImageChart from './image-chart.js';
+import Navigator from './time-navigator';
 
 const longBlock = `
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -37,6 +38,7 @@ class RootComponent extends React.Component {
     }
     return (
       <div className="relative">
+        <Navigator />
         <h1> Hello Explainable!</h1>
         <ImageChart imagePaths={['../../data/ship_images/pirate_ship.jpg',
           '../../data/ship_images/red_pirate.jpg',
