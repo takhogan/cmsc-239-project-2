@@ -1,0 +1,11 @@
+﻿Unit,Composition,Troop Size
+Grand Army,10 Sector Armies,3000000
+Sector Army,2 System Armies,294912
+System Army,4 corps,147456
+Corps,4 legions,36864
+Legion,4 regiments,9216
+Regiment,4 batallions,2304
+Batallion,4 companies,576
+Company,4 platoons,144
+Platoon,4 squads,36
+Squad,Basic form,9

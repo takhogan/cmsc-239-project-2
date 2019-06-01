@@ -1,0 +1,10 @@
+﻿Unit,Composition,Troop Size
+Army,2 corps,218000
+Corps,5 divisions,109000
+Division,5 regiments,21840
+Regiment,"4 batallions, 1 vanguard",4368
+Vanguard,Single large mass,1232
+Batallion,7 companies,784
+Company,2 platoons,112
+Platoon,7 squads,56
+Squad,Basic unit,8

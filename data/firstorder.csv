@@ -1,0 +1,9 @@
+﻿Unit,Composition,Troop Size
+Army,3 corps,73728
+Corps,4 battlegroups,24576
+Battlegroup,4 regiments,6144
+Regiment,4 batallions,1536
+Batallion,4 companies,384
+Company,3 platoons,96
+Platoon,4 squads,32
+Squad,Basic Unit,8
