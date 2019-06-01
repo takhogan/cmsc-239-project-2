@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { select, selectAll } from 'd3-selection';
+import { setGY } from '../utils';
 
 const to_year_str = (num) => {
     return num < 0 ? -num + " BBY" : num + " ABY";
@@ -18,6 +19,7 @@ export default class Navigator extends Component {
         let newyear = this.state.value;
         select("#year-text")
             .text(to_year_str(newyear));
+        setGY(newyear);
     }
 
     render() {
