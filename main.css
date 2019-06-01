@@ -99,3 +99,41 @@
   padding: 6px;
   text-transform: uppercase;
 }
+
+/* source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_rangeslider*/
+.slider {
+  -webkit-appearance: none;
+  width: 90%;
+  height: 30px;
+  background: hsl(242, 100%, 15%);
+  outline: none;
+  opacity: 0.85;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 40px;
+  background: hsl(49, 72%,64%);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 40px;
+  background: hsl(49, 72%,64%);
+  cursor: pointer;
+}
+
+.display-year {
+  font-size: 30px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
