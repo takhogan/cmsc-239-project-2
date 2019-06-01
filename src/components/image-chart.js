@@ -19,12 +19,12 @@ export default class ImageChart extends PureComponent {
         className = "image-chart-div"
         width = {'400px'}
         height = {'400px'}
-        style = {{backgroundColor: 'red', display: 'table-cell'}}
+        style = {{backgroundColor: 'transparent', textAlign: "center"}}
       >
         <button
           style = {{
             backgroundColor: 'transparent',
-            // border: 'none',
+            border: 'none',
             color: 'white',
             // padding: '15px 32px',
             display: 'inline-block',
@@ -45,7 +45,7 @@ export default class ImageChart extends PureComponent {
           src = {imagePaths[this.state.index]}
           height = {200}
           width = {200}
-          alt={'sss'}/>
+          alt={'image not found'}/>
         <button
           style = {{
             backgroundColor: 'transparent',

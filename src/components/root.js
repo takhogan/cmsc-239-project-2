@@ -37,7 +37,7 @@ class RootComponent extends React.Component {
       return <h1>LOADING</h1>;
     }
     return (
-      <div className="relative">
+      <div className="relative" style={{textAlign: 'center'}}>
         <Navigator />
         <h1> Hello Explainable!</h1>
         <ImageChart imagePaths={['../../data/ship_images/pirate_ship.jpg',
