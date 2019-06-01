@@ -1,0 +1,11 @@
+﻿Unit,Composition,Troop Size
+Sector Army,4 Systems Armies,1769472
+Systems Army,3 Armies,442368
+Army,4 corps,147456
+Corps,4 battlegroups,36864
+Battlegroup,4 regiments,9216
+Regiment,4 batallions,2304
+Batallion,4 companies,576
+Company,4 platoons,144
+Platoon,4 squads,36
+Squad,Basic unit,9
