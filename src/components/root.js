@@ -64,6 +64,7 @@ class RootComponent extends React.Component {
         <Dead />
         <div id = "phase1">
           <h2>The Clone Wars: Phase 1</h2>
+          <img src="../../data/phase_1/cover.png" style={{height: 300}} />
           <ImageChart imagePaths={['../../data/phase_1/im1.jpg',
             '../../data/phase_1/im2.jpg',
             '../../data/phase_1/im3.jpg']}/>
@@ -71,6 +72,7 @@ class RootComponent extends React.Component {
         </div>
         <div id = "phase2">
         <h2>The Clone Wars: Phase 2</h2>
+          <img src="../../data/phase_2/cover.png" style={{height: 300}} />
           <ImageChart imagePaths={['../../data/phase_2/im1.jpg',
             '../../data/phase_2/im2.jpg',
             '../../data/phase_2/im3.jpg']}/>
@@ -78,6 +80,7 @@ class RootComponent extends React.Component {
         </div>
         <div id = "empire">
         <h2>The Galactic Empire</h2>
+          <img src="../../data/storm_trooper/cover.png" style={{height: 300}} />
           <ImageChart imagePaths={['../../data/storm_trooper/im1.jpg',
             '../../data/storm_trooper/im2.jpg',
             '../../data/storm_trooper/im3.jpg']}/>
@@ -85,6 +88,7 @@ class RootComponent extends React.Component {
         </div>
         <div id = "FO">
           <h2>The First Order</h2>
+          <img src="../../data/first_order/cover.png" style={{height: 300}} />
           <ImageChart imagePaths={['../../data/first_order/im1.jpg',
             '../../data/first_order/im2.jpg',
             '../../data/first_order/im3.jpg']}/>
