@@ -27,7 +27,7 @@ export default class Pages extends Component {
             };
 
             this.setState({ page: page() });
-    
+
             switch(this.state.page) {
                 case 1:
                     select("#no-troops").style("display", "none");
