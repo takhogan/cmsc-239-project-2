@@ -14,6 +14,7 @@ non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 class RootComponent extends React.Component {
   constructor() {
+    const test = require('')
     super();
     this.state = {
       data: null,
@@ -43,6 +44,13 @@ class RootComponent extends React.Component {
         <ImageChart imagePaths={['../../data/ship_images/pirate_ship.jpg',
           '../../data/ship_images/red_pirate.jpg',
           '../../data/ship_images/white_pirate.jpg']}/>
+        <h2> Paragraph 1 </h2>
+        <div>{longBlock}</div>
+        <ImageChart imagePaths={['../../data/ship_images/pirate_ship.jpg',
+          '../../data/ship_images/red_pirate.jpg',
+          '../../data/ship_images/white_pirate.jpg']}/>
+        <h2> Paragraph 2 </h2>
+        <div>{longBlock}</div>
         <div>{`The example data was loaded! There are ${data.length} rows`}</div>
         <ExampleChart data={data}/>
         <div>{longBlock}</div>
