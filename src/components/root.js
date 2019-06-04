@@ -62,14 +62,28 @@ class RootComponent extends React.Component {
       <div className="relative" style={{textAlign: 'center'}}>
         <Navigator set_gy = {this.set_gy} />
         <h1> Hello Explainable!</h1>
-        <ImageChart imagePaths={['../../data/ship_images/pirate_ship.jpg',
-          '../../data/ship_images/red_pirate.jpg',
-          '../../data/ship_images/white_pirate.jpg']}/>
+        <div id = "phase1">
+          <ImageChart imagePaths={['../../data/phase_1/im1.jpg',
+            '../../data/phase_1/im2.jpg',
+            '../../data/phase_1/im3.jpg']}/>
+        </div>
+        <div id = "phase2">
+          <ImageChart imagePaths={['../../data/phase_2/im1.jpg',
+            '../../data/phase_2/im2.jpg',
+            '../../data/phase_2/im3.jpg']}/>
+        </div>
+        <div id = "empire">
+          <ImageChart imagePaths={['../../data/storm_trooper/im1.jpg',
+            '../../data/storm_trooper/im2.jpg',
+            '../../data/storm_trooper/im3.jpg']}/>
+        </div>
+        <div id = "FO">
+          <ImageChart imagePaths={['../../data/first_order/im1.jpg',
+            '../../data/first_order/im2.jpg',
+            '../../data/first_order/im3.jpg']}/>
+        </div>
         <h2> Paragraph 1 </h2>
         <div>{longBlock}</div>
-        <ImageChart imagePaths={['../../data/ship_images/pirate_ship.jpg',
-          '../../data/ship_images/red_pirate.jpg',
-          '../../data/ship_images/white_pirate.jpg']}/>
         <h2> Paragraph 2 </h2>
         <div>{longBlock}</div>
         <div>{`The example data was loaded! There are ${data.length} rows`}</div>
