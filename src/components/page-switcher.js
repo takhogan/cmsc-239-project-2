@@ -12,6 +12,7 @@ export default class Pages extends Component {
         setInterval(() => {
             let page = () => {
                 let year = this.props.get_gy();
+                console.log("YEar! " + year);
                 if (year < -22)
                     return 0;
                 else if (year === -22)
@@ -26,8 +27,6 @@ export default class Pages extends Component {
                     return 5;
             };
 
-            if (page() === this.state.page)
-                return;
             this.setState({ page: page() });
             console.log("Page changed to: " + this.state.page);
     
@@ -63,11 +62,11 @@ export default class Pages extends Component {
                 case 0:
                 case 4:
                 default:
-                    select("#no-troops").style("display", "none");
+                    select("#no-troops").style("display", "inline");
                     select("#phase1").style("display", "none");
                     select("#phase2").style("display", "none");
                     select("#empire").style("display", "none");
-                    select("#FO").style("display", "inline");
+                    select("#FO").style("display", "none");
                     break;
             }
         }, 500);
