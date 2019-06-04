@@ -59,29 +59,32 @@ class RootComponent extends React.Component {
     return (
       <div className="relative" style={{textAlign: 'center'}}>
         <Navigator set_gy = {this.set_gy} />
-        <h1> Hello Explainable!</h1>
-        <div>{`The example data was loaded! There are ${data.length} rows`}</div>
+        <h1>Stormtroopers throughout the Ages: A Star Wars Military History</h1>
         <Pages get_gy={this.get_gy}/>
         <Dead />
         <div id = "phase1">
+          <h2>The Clone Wars: Phase 1</h2>
           <ImageChart imagePaths={['../../data/phase_1/im1.jpg',
             '../../data/phase_1/im2.jpg',
             '../../data/phase_1/im3.jpg']}/>
           {`This is Phase 1 ${longBlock}`}
         </div>
         <div id = "phase2">
+        <h2>The Clone Wars: Phase 2</h2>
           <ImageChart imagePaths={['../../data/phase_2/im1.jpg',
             '../../data/phase_2/im2.jpg',
             '../../data/phase_2/im3.jpg']}/>
           {`This is Phase 2 ${longBlock}`}
         </div>
         <div id = "empire">
+        <h2>The Galactic Empire</h2>
           <ImageChart imagePaths={['../../data/storm_trooper/im1.jpg',
             '../../data/storm_trooper/im2.jpg',
             '../../data/storm_trooper/im3.jpg']}/>
           {`This is Empire ${longBlock}`}
         </div>
         <div id = "FO">
+          <h2>The First Order</h2>
           <ImageChart imagePaths={['../../data/first_order/im1.jpg',
             '../../data/first_order/im2.jpg',
             '../../data/first_order/im3.jpg']}/>

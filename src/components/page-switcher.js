@@ -72,7 +72,7 @@ export default class Pages extends Component {
 
     render() {
         return(
-            <div>test</div>
+            <div id="page-switcher"></div>
         );
     }
 }
