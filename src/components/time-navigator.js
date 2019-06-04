@@ -14,11 +14,11 @@ export default class Navigator extends Component {
     }
 
     slide(event) {
-        this.setState({value: event.target.value});
-        let newyear = this.state.value;
+        this.props.set_gy(event.target.value);
+        let newyear = event.target.value;
+        this.setState({value: newyear});
         select("#year-text")
             .text(to_year_str(newyear));
-        this.props.set_gy(newyear);
     }
 
     render() {

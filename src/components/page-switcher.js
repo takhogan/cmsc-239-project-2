@@ -12,23 +12,21 @@ export default class Pages extends Component {
         setInterval(() => {
             let page = () => {
                 let year = this.props.get_gy();
-                console.log("YEar! " + year);
-                if (year < -22)
-                    return 0;
-                else if (year === -22)
-                    return 1;
-                else if (year === -21 || year === -20)
-                    return 2;
-                else if (year >= -19 && year <= 5)
-                    return 3;
-                else if (year >= 6 && year <= 20)
-                    return 4;
-                else
+                if (year >= 21)
                     return 5;
+                else if (year >= 6)
+                    return 4;
+                else if (year >= -19)
+                    return 3;
+                else if (year >= -21)
+                    return 2;
+                else if (year >= -22)
+                    return 1;
+                else
+                    return 0;
             };
 
             this.setState({ page: page() });
-            console.log("Page changed to: " + this.state.page);
     
             switch(this.state.page) {
                 case 1:

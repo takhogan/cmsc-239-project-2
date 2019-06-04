@@ -22,7 +22,7 @@ class RootComponent extends React.Component {
     this.state = {
       data: null,
       loading: true,
-      globalyear: 0
+      globalyear: -22
     };
 
     this.set_gy = this.set_gy.bind(this);
@@ -35,11 +35,9 @@ class RootComponent extends React.Component {
       loading: this.state.loading,
       globalyear: val
     });
-    console.log(`Set GY ${this.state.globalyear}!`);
   }
 
   get_gy() {
-    console.log("Get GY!");
     return this.state.globalyear;
   }
 
@@ -62,37 +60,33 @@ class RootComponent extends React.Component {
       <div className="relative" style={{textAlign: 'center'}}>
         <Navigator set_gy = {this.set_gy} />
         <h1> Hello Explainable!</h1>
+        <div>{`The example data was loaded! There are ${data.length} rows`}</div>
+        <Pages get_gy={this.get_gy}/>
+        <Dead />
         <div id = "phase1">
           <ImageChart imagePaths={['../../data/phase_1/im1.jpg',
             '../../data/phase_1/im2.jpg',
             '../../data/phase_1/im3.jpg']}/>
+          {`This is Phase 1 ${longBlock}`}
         </div>
         <div id = "phase2">
           <ImageChart imagePaths={['../../data/phase_2/im1.jpg',
             '../../data/phase_2/im2.jpg',
             '../../data/phase_2/im3.jpg']}/>
+          {`This is Phase 2 ${longBlock}`}
         </div>
         <div id = "empire">
           <ImageChart imagePaths={['../../data/storm_trooper/im1.jpg',
             '../../data/storm_trooper/im2.jpg',
             '../../data/storm_trooper/im3.jpg']}/>
+          {`This is Empire ${longBlock}`}
         </div>
         <div id = "FO">
           <ImageChart imagePaths={['../../data/first_order/im1.jpg',
             '../../data/first_order/im2.jpg',
             '../../data/first_order/im3.jpg']}/>
+          {`This is First Order ${longBlock}`}
         </div>
-        <h2> Paragraph 1 </h2>
-        <div>{longBlock}</div>
-        <h2> Paragraph 2 </h2>
-        <div>{longBlock}</div>
-        <div>{`The example data was loaded! There are ${data.length} rows`}</div>
-        <Pages get_gy={this.get_gy}/>
-        <Dead />
-        <div id="phase1">{`This is Phase 1 ${longBlock}`}</div>
-        <div id="phase2">{`This is Phase 2 ${longBlock}`}</div>
-        <div id="empire">{`This is Empire ${longBlock}`}</div>
-        <div id="FO">{`This is First Order ${longBlock}`}</div>
       </div>
     );
   }
