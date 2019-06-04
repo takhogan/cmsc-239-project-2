@@ -65,7 +65,7 @@ class RootComponent extends React.Component {
         <div id = "phase1">
           <h2>The Clone Wars: Phase 1</h2>
           <img src="../../data/phase_1/cover.png" style={{height: 300}} />
-          <ImageChart imagePaths={['../../data/phase_1/im1.jpg',
+          <ImageChart imagePaths={['../../data/phase_1/img1.jpg',
             '../../data/phase_1/im2.jpg',
             '../../data/phase_1/im3.jpg']}/>
           {`This is Phase 1 ${longBlock}`}
@@ -80,7 +80,7 @@ class RootComponent extends React.Component {
         </div>
         <div id = "empire">
         <h2>The Galactic Empire</h2>
-          <img src="../../data/storm_trooper/cover.png" style={{height: 300}} />
+          <img src="../../data/empire/cover.png" style={{height: 300}} />
           <ImageChart imagePaths={['../../data/storm_trooper/im1.jpg',
             '../../data/storm_trooper/im2.jpg',
             '../../data/storm_trooper/im3.jpg']}/>
