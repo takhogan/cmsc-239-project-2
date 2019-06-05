@@ -27,44 +27,44 @@ export default class Pages extends Component {
             };
 
             this.setState({ page: page() });
-    
+
             switch(this.state.page) {
                 case 1:
-                    select("#no-troops").style("display", "none");
-                    select("#phase1").style("display", "inline");
-                    select("#phase2").style("display", "none");
-                    select("#empire").style("display", "none");
-                    select("#FO").style("display", "none");
+                    selectAll("#no-troops").style("display", "none");
+                    selectAll(".phase1").style("display", "inline");
+                    selectAll(".phase2").style("display", "none");
+                    selectAll(".empire").style("display", "none");
+                    selectAll(".FO").style("display", "none");
                     break;
                 case 2:
-                    select("#no-troops").style("display", "none");
-                    select("#phase1").style("display", "none");
-                    select("#phase2").style("display", "inline");
-                    select("#empire").style("display", "none");
-                    select("#FO").style("display", "none");
+                    selectAll("#no-troops").style("display", "none");
+                    selectAll(".phase1").style("display", "none");
+                    selectAll(".phase2").style("display", "inline");
+                    selectAll(".empire").style("display", "none");
+                    selectAll(".FO").style("display", "none");
                     break;
                 case 3:
-                    select("#no-troops").style("display", "none");
-                    select("#phase1").style("display", "none");
-                    select("#phase2").style("display", "none");
-                    select("#empire").style("display", "inline");
-                    select("#FO").style("display", "none");
+                    selectAll("#no-troops").style("display", "none");
+                    selectAll(".phase1").style("display", "none");
+                    selectAll(".phase2").style("display", "none");
+                    selectAll(".empire").style("display", "inline");
+                    selectAll(".FO").style("display", "none");
                     break;
                 case 5:
-                    select("#no-troops").style("display", "none");
-                    select("#phase1").style("display", "none");
-                    select("#phase2").style("display", "none");
-                    select("#empire").style("display", "none");
-                    select("#FO").style("display", "inline");
+                    selectAll("#no-troops").style("display", "none");
+                    selectAll(".phase1").style("display", "none");
+                    selectAll(".phase2").style("display", "none");
+                    selectAll(".empire").style("display", "none");
+                    selectAll(".FO").style("display", "inline");
                     break;
                 case 0:
                 case 4:
                 default:
-                    select("#no-troops").style("display", "inline");
-                    select("#phase1").style("display", "none");
-                    select("#phase2").style("display", "none");
-                    select("#empire").style("display", "none");
-                    select("#FO").style("display", "none");
+                    selectAll("#no-troops").style("display", "inline");
+                    selectAll(".phase1").style("display", "none");
+                    selectAll(".phase2").style("display", "none");
+                    selectAll(".empire").style("display", "none");
+                    selectAll(".FO").style("display", "none");
                     break;
             }
         }, 500);
