@@ -75,6 +75,7 @@ class RootComponent extends React.Component {
             '../../data/phase_1/special/jet.png']}/>
           <BarChart chartnum = "1"/>
           {`This is Phase 1 ${longBlock}`}
+          <BarChart chartnum = "1a"/>
         </div>
         <div className = "phase2">
           <h2>The Clone Wars: Phase 2</h2>
@@ -86,7 +87,9 @@ class RootComponent extends React.Component {
           <ImageChart imagePaths={['../../data/phase_2/special/fox.jpg',
             '../../data/phase_2/special/heavy.png',
             '../../data/phase_2/special/sniper.jpg']}/>
+          <BarChart chartnum = "2"/>
           {`This is Phase 2 ${longBlock}`}
+          <BarChart chartnum = "2a"/>
         </div>
         <div className = "empire">
           <h2>The Galactic Empire</h2>
@@ -98,7 +101,9 @@ class RootComponent extends React.Component {
           <ImageChart imagePaths={['../../data/empire/special/commander.png',
             '../../data/empire/special/magma.png',
             '../../data/empire/special/sniper.png']}/>
+          <BarChart chartnum = "3"/>
           {`This is Empire ${longBlock}`}
+          <BarChart chartnum = "3a"/>
         </div>
         <div className = "FO">
           <h2>The First Order</h2>
@@ -110,7 +115,9 @@ class RootComponent extends React.Component {
           <ImageChart imagePaths={['../../data/first_order/special/flame.jpg',
             '../../data/first_order/special/riot.jpg',
             '../../data/first_order/special/rocket.jpg']}/>
+          <BarChart chartnum = "4"/>
           {`This is First Order ${longBlock}`}
+          <BarChart chartnum = "4a"/>
         </div>
       </div>
     );
