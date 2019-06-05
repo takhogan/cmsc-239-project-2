@@ -1,4 +1,4 @@
-import {select, selectAll} from 'd3-selection';
+import {select, selectAll, event} from 'd3-selection';
 import {csv} from 'd3-fetch';
 import React, { Component } from 'react';
 import {scaleLinear, scaleBand} from 'd3-scale';
@@ -11,17 +11,45 @@ export default class BarChart extends Component {
   }
   componentDidMount() {
     let dataFile = "";
+    let fillColor = 'blue';
+    let resist = false;
     switch(this.props.chartnum) {
-      case "1":
-        dataFile = 'data/phase1.csv';
-        break
+    case '1':
+      dataFile = 'data/phase1.csv';
+      break;
+    case '2':
+      dataFile = 'data/phase1.csv';
+      break;
+    case '3':
+      dataFile = 'data/imperial.csv';
+      break;
+    case '4':
+      dataFile = 'data/firstorder.csv';
+      break;
+    case '1a':
+      dataFile = 'data/CIS.csv';
+      fillColor = 'red';
+      break;
+    case '2a':
+      dataFile = 'data/CIS.csv';
+      fillColor = 'red';
+      break;
+    case '3a':
+      dataFile = 'data/rebel.csv';
+      fillColor = 'red';
+      break;
+    case '4a':
+      dataFile = 'data/resistance.csv';
+      fillColor = 'red';
+      resist = true;
+      break;
     }
     csv(dataFile).then(data => {
       data.forEach(d => {
         d['Troop Size'] = Number(d['Troop Size'])
       })
       const width = 500;
-      const height = 200;
+      const height = 1000;
       const svg = select('#'+this.state.idstr)
                   .attr('height', height)
                   .attr('width', width);
@@ -40,15 +68,50 @@ export default class BarChart extends Component {
       const yScale = scaleLinear()
                      .domain([0, max(data, d => d['Troop Size'])])
                      .range([height, 0])
+      let tooltip = select('body')
+                    .append('div')
+                    .style('position', 'absolute')
+                    .style('display', 'none')
+                    .style('background', 'none repeat scroll 0 0 #ffffff')
+                    .style('min-width', '80px')
+                    .style('height', '40px')
+                    .style('border', '1px solid #6F257F')
+                    .style('padding', '14px')
+                    .style('color', 'black')
+                    .style('text-align', 'center');
+
       barChart.selectAll('rect')
               .data(data)
               .enter().append('rect')
               .attr('x', (d, i) => xScale(i))
-              .attr('width', xScale.bandwidth())
-              .attr('y', d => yScale(d['Troop Size']))
-              .attr('height', d => height - yScale(d['Troop Size']))
-              .style('fill', 'blue');
-      console.log(data)
+              .attr('width', () => {
+                if(resist) {
+                  return 100;
+                }
+                return xScale.bandwidth()
+              })
+              .attr('y', d => {
+                if(resist) {
+                  return 800;
+                }
+                return yScale(d['Troop Size'])
+              })
+              .attr('height', d => {
+                if(resist) {
+                  return height - 800
+                }
+                return height - yScale(d['Troop Size'])
+              })
+              .style('fill', fillColor)
+              .on("mousemove", d => {
+                tooltip.style("left", event.pageX - 50 + "px")
+                       .style("top",  event.pageY - 70 + "px")
+                       .style("display", "inline-block")
+                       .html((d.Unit) + "<br>" + (d.Composition) +"<br>"+ (d['Troop Size'])+ " troops");
+              })
+              .on("mouseout", d =>
+                tooltip.style('display', 'none')
+              );
     })
   }
   render(){
