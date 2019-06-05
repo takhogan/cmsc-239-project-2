@@ -17,8 +17,8 @@ export default class ImageChart extends PureComponent {
     return (
       <div
         className = "image-chart-div"
-        width = {'400px'}
-        height = {'400px'}
+        width = {'100%'}
+        height = {'100%'}
         style = {{backgroundColor: 'transparent', textAlign: "center"}}
       >
         <button
@@ -34,7 +34,7 @@ export default class ImageChart extends PureComponent {
             width: '0',
             height: '0',
             borderTop: '25px solid transparent',
-            borderRight: '50px solid green',
+            borderRight: '50px solid yellow',
             borderBottom: '25px solid transparent'
           }}
           onClick={() => this.changeIndex(-1)}
@@ -43,8 +43,8 @@ export default class ImageChart extends PureComponent {
         </button>
         <img
           src = {imagePaths[this.state.index]}
-          height = {200}
-          width = {200}
+          height = {'40%'}
+          width = {640}
           alt={'image not found'}/>
         <button
           style = {{
@@ -59,7 +59,7 @@ export default class ImageChart extends PureComponent {
             width: '0',
             height: '0',
             borderTop: '25px solid transparent',
-            borderLeft: '50px solid green',
+            borderLeft: '50px solid yellow',
             borderBottom: '25px solid transparent'
           }}
           onClick={() => this.changeIndex(1)}
