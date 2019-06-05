@@ -5,6 +5,7 @@ import ImageChart from './image-chart.js';
 import Navigator from './time-navigator';
 import Dead from './dead-page';
 import Pages from './page-switcher';
+import BarChart from './barcharts';
 import { timingSafeEqual } from 'crypto';
 
 const longBlock = `
@@ -68,6 +69,7 @@ class RootComponent extends React.Component {
           <ImageChart imagePaths={['../../data/phase_1/img1.jpg',
             '../../data/phase_1/im2.jpg',
             '../../data/phase_1/im3.jpg']}/>
+          <BarChart chartnum='1'/>
           {`This is Phase 1 ${longBlock}`}
         </div>
         <div id = "phase2">
