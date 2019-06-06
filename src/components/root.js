@@ -171,24 +171,44 @@ class RootComponent extends React.Component {
           {'The above chart shows the break down of Imperial military units. Hover over each bar to see the unit name, what it was comprised of, and how many troops there were.'}
           <h4> Opposing forces </h4>
           <BarChart chartnum = "3a"/>
-          {'The main oponents of the Empire was the Rebel Alliance. The above chart shows the break down of Alliance military units. Hover over each bar to see the unit name, what it was comprised of, and how many troops there were.'}
+          {'The main oponent of the Empire was the Rebel Alliance. The above chart shows the break down of Alliance military units. Hover over each bar to see the unit name, what it was comprised of, and how many troops there were.'}
           <h1/>
           <a href="#Top">Back to top</a>
         </div>
         <div className = "FO">
           <h2>The First Order</h2>
           <img src="../../data/first_order/cover.png" style={{height: 300}} />
+          <h3> Overview </h3>
+          {'The First Order stormtroopers were the military forces of the First Order. They were designed to be highly similar to the Imperial stormtroopers which preceded the First Order. Kidnapped at birth, stormtroopers were trained since childhood to be virtually bred for battle. They did not know their own names and referred instead to themselves and others by their serial numbers. They were made in the vision of General Brendol Hux’s perfect soldier.'}
           <hr style={{border: "2px solid yellow"}}/>
+          <h3> Vehicles Used </h3>
           <ImageChart imagePaths={['../../data/first_order/vehicles/im1.jpg',
             '../../data/first_order/vehicles/im2.jpg',
             '../../data/first_order/vehicles/im3.jpg']}/>
-          {`This is First Order ${longBlock}`}
+          <h5> Use the left and right arrows to toggle back and forth between images </h5>
+          <h4> Resurgent-class Star Destroyer </h4>
+          {'The Resurgent-class Star Destroyer was the main star destroyer used by First Order troops. It measured nearly 3 kilometers long, was heavily armored and gunned, and could carry up to 82,000 personnel. The ship was meant to embody the power and military might of the first order.'}
+          <h4> TIE/sf starfighter </h4>
+          {'The TIE/sf starfighter used by the First Order was a variant of the Imperial TIE fighter that predated it. Unlike the Imperial model, the TIE/sf fighter was a two seater fighter. It also was outfitted with better weapons and sensor systems, deflector shields, and a hyper drive.'}
+          <h4> All Terrain MegaCaliber Six Transport (ATM6) </h4>
+          {'The ATM6 was a massive, mobile assault walker used by the First Order. It was much larger than the other walkers in the First order arsenal, as well as its imperial predecessor. It featured a MegaCaliber Six turbolaser cannon on its gack, giving it massive fire power potential.'}
+          <h3> Special Units</h3>
           <ImageChart imagePaths={['../../data/first_order/special/flame.jpg',
             '../../data/first_order/special/riot.jpg',
             '../../data/first_order/special/rocket.jpg']}/>
+          <h5> Use the left and right arrows to toggle back and forth between images </h5>
+          <h4> First Order Flametrooper </h4>
+          {'The flametroopers of the First Order were a variant of the storm trooper used to root out enemies in entrenched positions. They were equipped with flame-proof armor and a high-powered flamethrower.'}
+          <h4> Riot Control Stormtrooper </h4>
+          {'The riot control stormtrooper was a variant of the First Order stormtrooper specially designed for crowd control on First Order controlled worlds. They were given non-lethal equipment like riot shields and Z6 control batons featuring lightsaber resistance. In cases of extreme crowd subduction, they carried blaster rifles for lethal force as well.'}
+          <h4> Jet trooper </h4>
+          {'The First Order rocket trooper was another variant of the stormtrooper used for special operations tactical missions. They carried small jump packs with small rockets and had pauldrons on their shoulders. They were trained in aerial combat rather than ground combat.'}
+          <h3> Military makeup of the Army </h3>
           <BarChart chartnum = "4"/>
-          {`This is First Order ${longBlock}`}
+          {'The above chart shows the break down of First Order military units. Hover over each bar to see the unit name, what it was comprised of, and how many troops there were.'}
           <BarChart chartnum = "4a"/>
+          {'The main oponent of the First Order was the Resistance. At the end of the Battle of Crait, less than 30 remained.'}
+          <h1/>
           <a href="#Top">Back to top</a>
         </div>
       </div>
