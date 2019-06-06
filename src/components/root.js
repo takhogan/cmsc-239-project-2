@@ -118,7 +118,6 @@ class RootComponent extends React.Component {
           {'The ARC-170 Starfighter was a multi-faceted heavy duty starfighter. Crewed by 3 clones, the ARC-170 contained a hyperdrive, allowing it to be used in both space battles as well as long range missions. Its heavy armament allowed for it to be used as a tactical ship, bomber, and dogfighter as well.'}
           <h4> TX-130 Saber class tank </h4>
           {'The TX-130 Saber-class tank was a highly maneuverable, fast attack tank. It was equipped with twin laser cannons, concussion missiles, and a beam turret on top. The ability for quick boosts of speed allowed for this tank to be used in quick skirmishes for tactical support, and then slip away.'}
-          {`This is Phase 2 ${longBlock}`}
           <h3> Special Units</h3>
           <ImageChart imagePaths={['../../data/phase_2/special/fox.jpg',
             '../../data/phase_2/special/clone_shock.jpg',
@@ -142,17 +141,38 @@ class RootComponent extends React.Component {
         <div className = "empire">
           <h2>The Galactic Empire</h2>
           <img src="../../data/empire/cover.png" style={{height: 300}} />
+          <h3> Overview </h3>
+          {'Imperial Stormtroopers were the main soldiers used by the Imperial Army after the Republic was converted into the Galactic Empire by Darth Sidious. Originally, the imperial stormtroopers were just repurposed clones from the Clone Wars. This practiced phased out, however, after clone insurrections and stormtroopers instead became human recruits. Recruits, also known as cadets, were given rigorous training in order to get them to be battle ready for the frontlines of battle. Unlike their predecessors, the imperial stormtrooper armor was standardized to be a simple white armor.'}
           <hr style={{border: "2px solid yellow"}}/>
+          <h3> Vehicles Used </h3>
           <ImageChart imagePaths={['../../data/empire/vehicles/im1.jpg',
             '../../data/empire/vehicles/im2.jpg',
             '../../data/empire/vehicles/im3.jpg']}/>
-          {`This is Empire ${longBlock}`}
+          <h5> Use the left and right arrows to toggle back and forth between images </h5>
+          <h4>Imperial-class Star Destroyer </h4>
+          {'The Imperial-class star destroyer was the most common capitol ship in the Imperial navy. Larger than its predecessor and with more fire power, the Imperial class star destroyer quickly replaced the Venator class star destroyer at the end of the clone wars. At the height of imperial power, the Empire had over 25,000 operating star destroyers in its navy.'}
+          <h4>All Terrain Scout Transport (ATST) </h4>
+          {'The ATST walker was made to be a lightweight, bipedal walker for troop tactical support, as well as to serve as the guard of larger ATAT walkers in major conflicts. The ATST’s swift pace and maneuverability meant that it could be used more easily to patrol cities under imperial control than other larger transports in the Empire’s use. They were equipped with high powered blaster cannons and concussion grenade launchers.'}
+          <h4>All Terrain Armored Transport (ATAT) </h4>
+          {'The ATAT walker was a massive, heavily armored, four-legged combat walker used by the Galactic empire. It was used not only for troop transport, but also to take out enemy installations with ease. High powered canons mounted to its front gave it the advantage in fire power against most ground artillery.'}
+          <h3> Special Units</h3>
           <ImageChart imagePaths={['../../data/empire/special/commander.png',
             '../../data/empire/special/magma.png',
             '../../data/empire/special/sniper.png']}/>
+          <h5> Use the left and right arrows to toggle back and forth between images </h5>
+          <h4> Stormtrooper Commander </h4>
+          {'Stormtrooper commanders were much lower in rank than their clone commander counterparts in the Galactic Republic’s army. Rather than commanding a whole corps of men, stormtrooper commanders were in charge of commanding their individual squads. Not terribly different from regular stormtroopers, they distinguished themselves by wearing orange and red pauldrons.'}
+          <h4> Magma Trooper </h4>
+          {'Magma troopers were a special force of stormtroopers that operated in particular on volcanic worlds. Their armor was designed to withstand extremely high temperatures, and included a black pauldron and respirators as well. They were mostly used on Mustafar, Shu-Torin and Sullust.'}
+          <h4>Stormtrooper sniper </h4>
+          {'Stormtrooper snipers were elite units of storm troopers. Distinguishing themselves with blue or white pauldrons on their shoulders, they were used for tactical support in battle and stationed on highly populated planets in order to keep civilian peace.'}
+          <h3> Military makeup of the Army </h3>
           <BarChart chartnum = "3"/>
-          {`This is Empire ${longBlock}`}
+          {'The above chart shows the break down of Imperial military units. Hover over each bar to see the unit name, what it was comprised of, and how many troops there were.'}
+          <h4> Opposing forces </h4>
           <BarChart chartnum = "3a"/>
+          {'The main oponents of the Empire was the Rebel Alliance. The above chart shows the break down of Alliance military units. Hover over each bar to see the unit name, what it was comprised of, and how many troops there were.'}
+          <h1/>
           <a href="#Top">Back to top</a>
         </div>
         <div className = "FO">
