@@ -86,18 +86,16 @@ export default class BarChart extends Component {
               .enter().append('rect')
               .attr('y', (d, i) => yScale(i))
               .attr('height', () => {
+                if (resist)
+                  return 70;
                 return yScale.bandwidth()
               })
               .attr('x', d => {
-                /*if(resist) {
-                  return 800;
-                }
-                return xScale(d['Troop Size'])*/
                 return 0;
               })
               .attr('width', d => {
                 if(resist) {
-                  return width - 800
+                  return width - 98 * width / 100
                 }
                 return width - xScale(d['Troop Size'])
               })
