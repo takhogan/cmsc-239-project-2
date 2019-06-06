@@ -43,8 +43,7 @@ export default class ImageChart extends PureComponent {
         </button>
         <img
           src = {imagePaths[this.state.index]}
-          height = {'40%'}
-          width = {640}
+          style={{width: 500, height: 500}}
           alt={'image not found'}/>
         <button
           style = {{

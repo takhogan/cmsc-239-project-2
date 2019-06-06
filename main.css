@@ -143,3 +143,8 @@ body {
   background-repeat: repeat;
   color: yellow;
 }
+
+a {
+  font-size: 40;
+  color: yellow;
+}
