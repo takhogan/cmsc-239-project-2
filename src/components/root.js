@@ -59,6 +59,7 @@ class RootComponent extends React.Component {
     }
     return (
       <div className="relative" style={{textAlign: 'center'}}>
+        <a name="Top" />
         <Navigator set_gy = {this.set_gy} />
         <h1>Stormtroopers throughout the Ages: A Star Wars Military History</h1>
         <Pages get_gy={this.get_gy}/>
@@ -66,6 +67,7 @@ class RootComponent extends React.Component {
         <div className = "phase1" >
           <h2>The Clone Wars: Phase 1</h2>
           <img src="../../data/phase_1/cover.png" style={{height: 300}} />
+          <hr style={{border: "2px solid yellow"}}/>
           <ImageChart imagePaths={['../../data/phase_1/vehicles/im1.jpg',
             '../../data/phase_1/vehicles/im2.jpg',
             '../../data/phase_1/vehicles/im3.jpg']}/>
@@ -76,10 +78,12 @@ class RootComponent extends React.Component {
           <BarChart chartnum = "1"/>
           {`This is Phase 1 ${longBlock}`}
           <BarChart chartnum = "1a"/>
+          <a href="#Top">Back to top</a>
         </div>
         <div className = "phase2">
           <h2>The Clone Wars: Phase 2</h2>
           <img src="../../data/phase_2/cover.png" style={{height: 300}} />
+          <hr style={{border: "2px solid yellow"}}/>
           <ImageChart imagePaths={['../../data/phase_2/vehicles/im1.jpg',
             '../../data/phase_2/vehicles/im2.jpg',
             '../../data/phase_2/vehicles/im3.jpg']}/>
@@ -90,10 +94,12 @@ class RootComponent extends React.Component {
           <BarChart chartnum = "2"/>
           {`This is Phase 2 ${longBlock}`}
           <BarChart chartnum = "2a"/>
+          <a href="#Top">Back to top</a>
         </div>
         <div className = "empire">
           <h2>The Galactic Empire</h2>
           <img src="../../data/empire/cover.png" style={{height: 300}} />
+          <hr style={{border: "2px solid yellow"}}/>
           <ImageChart imagePaths={['../../data/empire/vehicles/im1.jpg',
             '../../data/empire/vehicles/im2.jpg',
             '../../data/empire/vehicles/im3.jpg']}/>
@@ -104,10 +110,12 @@ class RootComponent extends React.Component {
           <BarChart chartnum = "3"/>
           {`This is Empire ${longBlock}`}
           <BarChart chartnum = "3a"/>
+          <a href="#Top">Back to top</a>
         </div>
         <div className = "FO">
           <h2>The First Order</h2>
           <img src="../../data/first_order/cover.png" style={{height: 300}} />
+          <hr style={{border: "2px solid yellow"}}/>
           <ImageChart imagePaths={['../../data/first_order/vehicles/im1.jpg',
             '../../data/first_order/vehicles/im2.jpg',
             '../../data/first_order/vehicles/im3.jpg']}/>
@@ -118,6 +126,7 @@ class RootComponent extends React.Component {
           <BarChart chartnum = "4"/>
           {`This is First Order ${longBlock}`}
           <BarChart chartnum = "4a"/>
+          <a href="#Top">Back to top</a>
         </div>
       </div>
     );

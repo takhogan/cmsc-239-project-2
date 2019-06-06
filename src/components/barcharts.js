@@ -1,7 +1,7 @@
 import {select, selectAll, event} from 'd3-selection';
 import {csv} from 'd3-fetch';
 import React, { Component } from 'react';
-import {scaleLinear, scaleBand} from 'd3-scale';
+import {scaleLinear, scaleBand, scalePow} from 'd3-scale';
 import {max} from 'd3-array';
 
 export default class BarChart extends Component {
@@ -48,26 +48,27 @@ export default class BarChart extends Component {
       data.forEach(d => {
         d['Troop Size'] = Number(d['Troop Size'])
       })
-      const width = 500;
-      const height = 1000;
+      const height = 500;
+      const width = 1000;
       const svg = select('#'+this.state.idstr)
                   .attr('height', height)
                   .attr('width', width);
-      svg.append('rect').attr('width', width).attr('height', height).style('fill', 'white');
+      svg.append('rect').attr('width', width).attr('height', height).style('fill', 'rgba(3,0,77,0.4)');
       const barChart = svg.append('g')
-                          .attr('width', 450)
                           .attr('height', height)
-                          .attr('transform', 'translate(50,0)')
-      const xScale = scaleBand()
+                          .attr('width', width)
+                          //.attr('transform', 'translate(50,0)')
+      const yScale = scaleBand()
                      .domain(data.map((d, i) => {
                        return i;
                      }))
-                      .range([0, 450])
+                      .range([0, 500])
                       .padding([0.1]);
       console.log(max(data, d => d['Troop Size']))
-      const yScale = scaleLinear()
-                     .domain([0, max(data, d => d['Troop Size'])])
-                     .range([height, 0])
+      const xScale = scalePow()
+                     .exponent(0.5)
+                     .domain([1, max(data, d => d['Troop Size'])])
+                     .range([width, 0])
       let tooltip = select('body')
                     .append('div')
                     .style('position', 'absolute')
@@ -83,24 +84,22 @@ export default class BarChart extends Component {
       barChart.selectAll('rect')
               .data(data)
               .enter().append('rect')
-              .attr('x', (d, i) => xScale(i))
-              .attr('width', () => {
-                if(resist) {
-                  return 100;
-                }
-                return xScale.bandwidth()
+              .attr('y', (d, i) => yScale(i))
+              .attr('height', () => {
+                return yScale.bandwidth()
               })
-              .attr('y', d => {
-                if(resist) {
+              .attr('x', d => {
+                /*if(resist) {
                   return 800;
                 }
-                return yScale(d['Troop Size'])
+                return xScale(d['Troop Size'])*/
+                return 0;
               })
-              .attr('height', d => {
+              .attr('width', d => {
                 if(resist) {
-                  return height - 800
+                  return width - 800
                 }
-                return height - yScale(d['Troop Size'])
+                return width - xScale(d['Troop Size'])
               })
               .style('fill', fillColor)
               .on("mousemove", d => {
